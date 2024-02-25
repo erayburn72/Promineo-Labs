@@ -18,10 +18,14 @@ public class Week05OOPLab {
 	//		There are many ways to implement this Lab, please use the tools that you know,
 	//		and go from there.
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// These exercises are intended to be coded in order 1 through 5.
 =======
 	// These exercises are intended to coded in order 1 through 5.
 >>>>>>> aa8dfed (Add All Existing Labs)
+=======
+	// These exercises are intended to be coded in order 1 through 5.
+>>>>>>> d37cc38 (Add Extra Week5 Labs)
 		
 	
 	public static void main(String[] args) {
