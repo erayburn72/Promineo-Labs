@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+aa8dfed (Add All Existing Labs)
 # Java CheatSheet
 
 ```Java
@@ -170,6 +170,6 @@ greet("Tony");  //prints Welcome, Tony!
 
 String greeting = greet("Harvey"); //DOES NOT COMPILE
 ``` 
-=======
 # New-BackEnd-Labs
->>>>>>> 40b2aee (Add README.md)
+40b2aee (Add README.md)
+aa8dfed (Add All Existing Labs)

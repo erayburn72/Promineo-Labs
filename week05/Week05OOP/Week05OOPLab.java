@@ -17,7 +17,11 @@ public class Week05OOPLab {
 	//		The idea here is to prepare you for your Week 6 Unit Final Project.
 	//		There are many ways to implement this Lab, please use the tools that you know,
 	//		and go from there.
+<<<<<<< HEAD
 	// These exercises are intended to be coded in order 1 through 5.
+=======
+	// These exercises are intended to coded in order 1 through 5.
+>>>>>>> aa8dfed (Add All Existing Labs)
 		
 	
 	public static void main(String[] args) {

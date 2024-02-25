@@ -41,13 +41,22 @@ public class Week06TicTacToeLab {
 	//				that integer (1-9) to choose the location.
 	//
 	//		- One way to display the game board would be as follows:
+<<<<<<< HEAD
 	//				+---+---+---+       to		+---+---+---+		+---+---+---+		+---+---+---+
 	//				| 1 | 2 | 3 |	   find		|---|---|---|		| | | | | | |		| \ |   | / |
+=======
+	//				+---+---+---+		to		+---+---+---+		+---+---+---+		+---+---+---+
+	//				| 1 | 2 | 3 |	   find	    |---|---|---|		| | | | | | |		| \ |   | / |
+>>>>>>> aa8dfed (Add All Existing Labs)
 	//				+---+---+---+	   a win	+---+---+---+		+---+---+---+		+---+---+---+
 	//				| 4 | 5 | 6 |	-- look-->	|---|---|---|	&	| | | | | | |   & 	|   | X |   |
 	//				+---+---+---+	 at these	+---+---+---+		+---+---+---+		+---+---+---+
 	//				| 7 | 8 | 9 |	8 patterns	|---|---|---|		| | | | | | |		| / |   | \ |
+<<<<<<< HEAD
 	//				+---+---+---+		        +---+---+---+		+---+---+---+		+---+---+---+
+=======
+	//				+---+---+---+				+---+---+---+		+---+---+---+		+---+---+---+
+>>>>>>> aa8dfed (Add All Existing Labs)
 		
 		
 	// Start with these steps:
@@ -78,7 +87,11 @@ public class Week06TicTacToeLab {
 	//					b. Another option for the gameBoard would be a 2d array -- This option might be
 	//						is a bit more challenging!  
 	//
+<<<<<<< HEAD
 	//						For example:  String[][] gameBoard = new String[3][3];
+=======
+	//						For example:  String[] gameBoard = new String[3][3];
+>>>>>>> aa8dfed (Add All Existing Labs)
 	//					
 	//							i. Just remember that arrays are 0 based, so to access the grid, 
 	//							the index would go from 0-2 in two directions.  
