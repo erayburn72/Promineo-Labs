@@ -24,16 +24,21 @@ public class Deck {
 			}
 		}
 	}
-
-	public void shuffleDeck() {
-		Collections.shuffle(cards);
-	}
-
+	
 	public void describe() {
 		System.out.println("Deck of cards contains: ");
 		for (Card card : cards) {
 			card.describe();
 		}
+	}
+	
+	public void shuffleDeck() {
+		Collections.shuffle(cards);
+	}
+
+	public void draw() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public List<Card> getCards() {
@@ -52,4 +57,5 @@ public class Deck {
 		return names;
 	}
 
+	
 }

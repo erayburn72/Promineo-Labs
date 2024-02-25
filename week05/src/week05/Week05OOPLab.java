@@ -84,7 +84,8 @@ public class Week05OOPLab {
 		// Add a draw method within the Deck Class
 		System.out.println("\nQuestion 4: Deck draw() method");
 		// Test your method here
-
+		deck.draw();
+		
 		// 5. Create Game Board:
 		// Create and test a method that takes an int as a parameter (representing the
 		// number of players for a game) and returns a Map<String, List<Card>>
