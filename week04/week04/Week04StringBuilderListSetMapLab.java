@@ -62,13 +62,14 @@ public class Week04StringBuilderListSetMapLab {
 		// separated by a comma
 		System.out.println(getConcatenatedString(listStrings));
 
-		// 6. Write and test a method that takes a list of strings and a string
-		// and returns a new list with all strings from the original list
-		// containing the second string parameter (i.e. like a search method)
-		Scanner search = new Scanner(System.in);
-		System.out.println("Enter a Search String");
-		String searchString = search.nextLine();
-		System.out.println(getFindString(listStrings, searchString));
+		try (// 6. Write and test a method that takes a list of strings and a string
+				// and returns a new list with all strings from the original list
+				// containing the second string parameter (i.e. like a search method)
+				Scanner search = new Scanner(System.in)) {
+			System.out.println("Enter a Search String");
+			String searchString = search.nextLine();
+			System.out.println(getFindString(listStrings, searchString));
+		}
 		// 7. Write and test a method that takes a list of integers
 		// and returns a List<List<Integer>> with the following conditions specified
 		// for the return value:
@@ -79,22 +80,22 @@ public class Week04StringBuilderListSetMapLab {
 		// 3
 		// c. The third containing values divisible by 5, and
 		// d. The fourth all numbers from the input List not divisible by 2, 3, or 5
-		Scanner numberInList = new Scanner(System.in);
-		System.out.println("Enter Number of Integers in List"); // Better code would be to build a menu, using this
-																// instead to expedite the entry process.
-		int x = numberInList.nextInt();
+		try (Scanner numberInList = new Scanner(System.in)) {
+			System.out.println("Enter Number of Integers in List"); // Better code would be to build a menu, using this
+																	// instead to expedite the entry process.
+			int x = numberInList.nextInt();
 
-		Scanner listInput = new Scanner(System.in);
-		System.out.println("Enter " + x + " integers.");
+			try (Scanner listInput = new Scanner(System.in)) {
+				System.out.println("Enter " + x + " integers.");
 
-		List<Integer> listOfIntegers = new ArrayList<>();
-		for (int i = 0; i < x; i++) {
-			listOfIntegers.add(listInput.nextInt());
+				List<Integer> listOfIntegers = new ArrayList<>();
+				for (int i = 0; i < x; i++) {
+					listOfIntegers.add(listInput.nextInt());
 
+					System.out.println(getMapResults(listOfIntegers));
+				}
+			}
 		}
-
-		System.out.println(getMapResults(listOfIntegers));
-
 		// 8. Write and test a method that takes a list of strings
 		// and returns a list of integers that contains the length of each string
 		System.out.println("Length of Strings are: " + getStringLength(listStrings));
@@ -225,7 +226,7 @@ public class Week04StringBuilderListSetMapLab {
 		List<Integer> three = new ArrayList<>();
 		List<Integer> five = new ArrayList<>();
 		List<Integer> other = new ArrayList<>();
-		List<List<Integer>> getMapResults = new ArrayList();
+		List<List<Integer>> getMapResults = new ArrayList<List<Integer>>();
 
 		for (int n : listOfIntegers) {
 			int nState = 0;
