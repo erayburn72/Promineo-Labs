@@ -6,7 +6,6 @@
 //
 package week05;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Week05OOPLab {
