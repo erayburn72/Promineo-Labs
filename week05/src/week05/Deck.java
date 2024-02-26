@@ -10,7 +10,7 @@ public class Deck {
 	private final List<String> names = List.of("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
 			"Ten", "Jack", "Queen", "King", "Ace");
 
-	private List<Card> cards = new ArrayList<Card>();
+	private List<Card> deck = new ArrayList<Card>();
 
 	public Deck() {
 
@@ -20,33 +20,33 @@ public class Deck {
 
 			for (String suit : suits) {
 				Card card = new Card(name, suit, value);
-				cards.add(card);
+				deck.add(card);
 			}
 		}
 	}
-	
+
 	public void describe() {
 		System.out.println("Deck of cards contains: ");
-		for (Card card : cards) {
+		for (Card card : deck) {
 			card.describe();
 		}
 	}
-	
-	public void shuffleDeck() {
-		Collections.shuffle(cards);
+
+	public void shuffle() {
+		Collections.shuffle(deck);
 	}
 
 	public void draw() {
-		// TODO Auto-generated method stub
-		
+		Card drawn = new Card(deck.get(0).name, deck.get(0).suit, deck.get(0).value);
+		drawn.describe();
 	}
 
 	public List<Card> getCards() {
-		return cards;
+		return deck;
 	}
 
 	public void setCards(List<Card> cards) {
-		this.cards = cards;
+		this.deck = cards;
 	}
 
 	public List<String> getSuits() {
@@ -57,5 +57,4 @@ public class Deck {
 		return names;
 	}
 
-	
 }

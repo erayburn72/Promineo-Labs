@@ -6,6 +6,9 @@
 //
 package week05;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Week05OOPLab {
@@ -47,14 +50,13 @@ public class Week05OOPLab {
 		try (Scanner s = new Scanner(System.in)) {
 			String name = s.nextLine();
 			String suit = s.nextLine();
-			int value = s.nextInt();
-
+			int value = Integer.parseInt(s.nextLine());
+			
 			Card card = new Card(name, suit, value);
 
 			// Call the describe method on the newly instantiated card.
 			card.describe();
-		}
-
+		
 		// 2. Deck Class:
 		// Create a class called Deck.
 		// Fields: This class should have a list of Card field called cards
@@ -77,7 +79,7 @@ public class Week05OOPLab {
 		// Add a shuffle method within the Deck Class
 		System.out.println("\nQuestion 3: Deck shuffle() method");
 		// Test your method here
-		deck.shuffleDeck();
+		deck.shuffle();
 		// Call the describe method on the newly shuffled deck.
 		deck.describe();
 		// 4. Deck draw() Method:
@@ -85,7 +87,6 @@ public class Week05OOPLab {
 		System.out.println("\nQuestion 4: Deck draw() method");
 		// Test your method here
 		deck.draw();
-		
 		// 5. Create Game Board:
 		// Create and test a method that takes an int as a parameter (representing the
 		// number of players for a game) and returns a Map<String, List<Card>>
@@ -96,9 +97,27 @@ public class Week05OOPLab {
 		// and deal the cards out to the "players" in the Map.
 		System.out.println("\nQuestion 5: Create Game");
 		// Call your method here
-
+		System.out.println("Enter Number of Players");
+		int numberPlayers = Integer.parseInt(s.nextLine());
+		createGame(numberPlayers);
+		}
 	}
 
 	// Method 5:
+	public static Map<String, List<Card>> createGame(int numberPlayers) {
+		// Create the map and populate the players
+		Map<String, List<Card>> players = new HashMap<>();
+		for (int i = 1; i < numberPlayers - 1; i++) {
+			players.put("Player " + i, null);
+		}
+		// Create a new Deck
+		Deck deck = new Deck();
+		deck.describe(); // show we have a deck
+		deck.shuffle(); // shuffle deck
+		System.out.println("\nDeck is Shuffled\n");
+		deck.describe(); // show it is shuffled
+		// Draw cards to players - might modify code later - first pass
 
+		return players;
+	}
 }

@@ -13,7 +13,7 @@ public class Card {
 	}
 
 	public void describe() {
-		System.out.println("Card " + name + " of " + suit + " Whose Value is equal to: " + value);
+		System.out.println("Card " + name + " of " + suit + " --Value: " + value);
 	}
 
 	public String getName() {
